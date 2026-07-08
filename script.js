@@ -71,6 +71,7 @@ function UpdateSongInfo(data) {
 	let albumArtUrl = data.artwork.url;
 	albumArtUrl = albumArtUrl.replace("{w}", data.artwork.width);
 	albumArtUrl = albumArtUrl.replace("{h}", data.artwork.height);
+	albumArtUrl = albumArtUrl.replace("{f}", "jpg");
 
 	UpdateAlbumArt(document.getElementById("albumArt"), albumArtUrl);
 	UpdateAlbumArt(document.getElementById("backgroundImage"), albumArtUrl);
